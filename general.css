@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container { max-width: 1060px; }
+.container-smaller { max-width: 844px; }
+.container, .container-smaller {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* NAVIGATION */
+nav > .container, .logo {
+  display: flex;
+}
+
+nav > .container{
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.25em 0;
+}
+nav {
+  background-color: #fff;
+}
+
+.logo {align-items: center;}
+
+.logo-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.84375rem;
+  color: #0E0E0E;
+}
+
+.navigation {
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.hide-navigation {
+  padding-top: 0.5em;
+  height: 59px;
+}
+
+.home {
+  border-bottom: 1px solid #090909;
+  padding-bottom: 0.5em;
+}
+
+.about {
+  padding-top: 0.5em;
+}
+
+.home, .about { text-transform: uppercase; }
+
+.humburger-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+
+.menu-line {
+  width: 1.5rem;
+  height: 3px;
+  background-color: #000;
+}
+
+.home, .about {color: #090909;}
+
+/* HEADER CONTENT */
+.header-title {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.date {
+  font-size: 0.75rem;
+}
+
+/* ARTICLE CARD */
+.article-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card { margin-top: 2.5625em; }
+.article-card:first-child { margin-top: 2.125em; }
+
+.article-img img{
+  width: 100%;
+}
+
+.article-date {
+  font-size: 0.875rem;
+}
+.article-title { color: #141414; }
+.article-detail { color: #505050; }
+
+.margin {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.6875em;
+}
+
+.footer-info {
+  padding: 2.3125em 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #fff;
+  line-height: 1.5;
+}
+.footer-info h3 { font-size: inherit; }
+
+/* MEDIA QUERIES */
+@media (min-width: 425px) {
+  .humburger-menu {
+    display: none;
+  }
+
+  nav > .container {
+    flex-wrap: nowrap;
+  }
+
+  .navigation {
+    width: auto;
+    height: auto;
+    flex-grow: 0;
+    text-align: initial;
+    display: flex;
+  }
+
+  .home {
+    border-bottom: none;
+  }
+
+  .home, .about { padding: 0; }
+
+  .about {
+    padding-left: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-text {
+    font-size: 1.25rem;
+  }
+  .home, .about, .date {
+    font-size: 1rem;
+  }
+  
+  .about {
+    padding-left: 2em;
+  }
+
+  .article-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .article-card {
+    flex: 1 calc(33.33% - 1rem);
+  }
+
+  .article-card, .article-card:first-child {
+    margin: 0;
+  }
+}

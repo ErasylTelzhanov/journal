@@ -1,0 +1,49 @@
+/* HEADER */
+header {
+  background-image: url('./img/header-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* TOP PREVIEW */
+.header-content {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  padding-bottom: 2em;
+}
+
+/* SPECIFIC CLASS */
+main {
+  margin-top: 1em;
+}
+
+.view-more {
+  align-self: center;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ARTICLE CONTENT */
+.article-list {
+  margin-top: 2.125em;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 425px) {
+  .header-content {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-more {
+    margin: 0 auto;
+  }
+  .article-list {
+    margin-top: 3.3125em;
+  }
+}
